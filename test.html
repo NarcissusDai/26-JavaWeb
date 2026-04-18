@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>专业技术博客</title> 
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8/dist/css/bootstrap.min.css">
+    <script src="./assets/bootstrap-5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        /* 为了完美还原图片的浅蓝色调 */
+        .sidebar-title { background-color: #f8f9fa; border-left: 5px solid #0d6efd; padding: 5px 10px; margin-bottom: 10px; }
+        .article-item { background-color: #e9f2fb; border: 1px solid #dee2e6; margin-bottom: 15px; padding: 15px; }
+        .nav-link-custom { color: #333; text-decoration: none; display: block; padding: 5px 0; }
+        .nav-link-custom:hover { color: #0d6efd; }
+    </style>
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <div class="row m-0" style="height: 200px; background-image: url('11.jpg'); background-size: cover; background-position: center;">
+            <div class="col-12 d-flex align-items-center ps-5">
+                <h1 style="color: white; text-shadow: 2px 2px 10px black; font-weight: bold;">专业技术博客</h1>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
+        <div class="container">
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#">首页</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">注册</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">登录</a></li>
+                </ul>
+                <form class="d-flex w-50" role="search">
+                    <div class="input-group">
+                        <select class="form-select" style="max-width: 120px;">
+                            <option selected>按文章名</option>
+                            <option>按作者</option>
+                        </select>
+                        <input class="form-control" type="search" placeholder="请输入搜索内容">
+                        <button class="btn btn-warning" type="submit">搜索</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="mb-4">
+                    <h5 class="sidebar-title">文章分类</h5>
+                    <div class="ps-2">
+                        <a href="#" class="nav-link-custom">Java语言</a>
+                        <a href="#" class="nav-link-custom">Bootstrap框架</a>
+                        <a href="#" class="nav-link-custom">Python语言</a>
+                        <a href="#" class="nav-link-custom">分布式系统</a>
+                    </div>
+                </div>
+                <div class="mb-4">
+                    <h5 class="sidebar-title">博客排名</h5>
+                    <div class="ps-2">
+                        <a href="#" class="nav-link-custom">小点点博客</a>
+                        <a href="#" class="nav-link-custom">张小峰的书院</a>
+                        <a href="#" class="nav-link-custom">风之子-晚风</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-9">
+                <div class="article-item">
+                    <h4 class="text-primary">HTML CSS 前端开发课程大纲</h4>
+                    <p class="text-muted">HTML CSS前端开发课程是当前主流的Web前端应用技术手段。阅读全文</p>
+                    <div class="text-end small text-secondary">
+                        2015-09-09 13:45 作者：王小光 【评论：0】 【阅读：20】
+                    </div>
+                </div>
+
+                <div class="article-item">
+                    <h4 class="text-primary">HTML CSS 前端开发课程大纲</h4>
+                    <p class="text-muted">HTML CSS前端开发课程是当前主流的Web前端应用技术手段。阅读全文</p>
+                    <div class="text-end small text-secondary">
+                        2015-09-09 13:45 作者：王小光 【评论：0】 【阅读：20】
+                    </div>
+                </div>
+                
+                </div>
+        </div>
+    </div>
+</body>
+</html>
