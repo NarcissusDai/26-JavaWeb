@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户注册 - Narcissus Blog</title>
+    <link rel="stylesheet" href="../assets/bootstrap-5.3.8/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            background-color: #f4f7f9;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Inter', -apple-system, sans-serif;
+        }
+
+        .register-card {
+            width: 100%;
+            max-width: 480px; /* 稍微加宽，增加横向气场 */
+            background: white;
+            border-radius: 24px;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.08);
+            overflow: hidden;
+        }
+
+        .register-header {
+            background-color: #1a1a1a;
+            color: white;
+            padding: 50px 20px; /* 增加头部高度 */
+            text-align: center;
+        }
+
+        .register-header h2 {
+            margin: 0;
+            font-weight: 800;
+            letter-spacing: 4px; /* 拉开字间距 */
+            font-size: 30px;
+        }
+
+        .register-body {
+            padding: 50px 45px; /* 核心调整：极大的内边距 */
+        }
+
+        .form-group-custom {
+            margin-bottom: 28px; /* 增加表单项之间的垂直间距 */
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: #2d3436;
+            font-size: 13px;
+            margin-bottom: 10px; /* 标签与输入框彻底分开 */
+            display: block;
+            letter-spacing: 1px;
+        }
+
+        .form-control {
+            border: 1.5px solid #f1f3f5; /* 增加浅色边框，更有精致感 */
+            background-color: #fcfcfc;
+            padding: 14px 20px; /* 增加输入框内部高度 */
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus {
+            background-color: #ffffff;
+            border-color: #1a1a1a; /* 聚焦时边框变黑 */
+            box-shadow: none;
+        }
+
+        .btn-register {
+            background-color: #1a1a1a;
+            color: white;
+            border: none;
+            padding: 15px; /* 按钮加厚 */
+            font-weight: 700;
+            margin-top: 20px;
+            letter-spacing: 2px;
+            transition: transform 0.2s;
+        }
+
+        .btn-register:hover {
+            opacity: 0.9;
+            color: white;
+            transform: translateY(-2px); /* 悬浮微动，增加轻盈感 */
+        }
+
+        .back-link {
+            display: block;
+            text-align: center;
+            margin-top: 35px; /* 底部链接大幅下移 */
+            color: #b2bec3;
+            text-decoration: none;
+            font-size: 13px;
+            transition: color 0.3s;
+        }
+
+        .back-link:hover {
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+
+<div class="register-card">
+    <div class="register-header">
+        <h2>WELCOME</h2>
+        <p class="m-0 mt-3 opacity-50 small" style="letter-spacing: 1px;">TECHNOLOGY & PERSISTENCE</p>
+    </div>
+
+    <div class="register-body">
+        <form action="../registerServlet" method="post">
+
+            <div class="form-group-custom">
+                <label class="form-label">USERNAME / 用户名</label>
+                <input type="text" name="username" class="form-control rounded-pill" placeholder="你想被称为..." required>
+            </div>
+
+            <div class="form-group-custom">
+                <label class="form-label">EMAIL / 电子邮箱</label>
+                <input type="email" name="email" class="form-control rounded-pill" placeholder="example@mail.com" required>
+            </div>
+
+            <div class="form-group-custom" style="margin-bottom: 40px;"> <label class="form-label">PASSWORD / 设置密码</label>
+                <input type="password" name="password" class="form-control rounded-pill" placeholder="建议包含字母与数字" required>
+            </div>
+
+            <button type="submit" class="btn btn-register w-100 rounded-pill shadow-sm">
+                立即开启
+            </button>
+
+            <a href="/BlogWeb_war" class="back-link">DISMISS & BACK TO HOME / 返回首页</a>
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <link rel="icon" href="./assets/bootstrap-5.3.8/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>技术博客 - Narcissus</title>
+    <link rel="stylesheet" href="./assets/bootstrap-5.3.8/dist/css/bootstrap.min.css">
+    <script src="./assets/bootstrap-5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            background-color: #f4f7f9;
+            font-family: 'Inter', -apple-system, "Helvetica Neue", Arial, sans-serif;
+        }
+
+        /* Hero Banner 样式 */
+        .hero-banner {
+            background-image: linear-gradient(135deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 100%), url('11.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            height: 260px;
+        }
+
+        /* 搜索框样式 */
+        .search-group .form-control {
+            border: none;
+            background-color: transparent;
+            font-size: 14px;
+        }
+        .search-group .form-control:focus { box-shadow: none; }
+
+        /* 侧边栏样式 */
+        .sidebar-accordion .accordion-item {
+            border: none;
+            background-color: transparent;
+        }
+        .sidebar-accordion .accordion-button {
+            background-color: transparent;
+            font-weight: 600;
+            color: #444;
+            box-shadow: none !important;
+        }
+        .sidebar-accordion .list-group-item {
+            border: none;
+            font-size: 14px;
+            color: #666;
+            background-color: transparent;
+            transition: all 0.2s;
+        }
+        .sidebar-accordion .list-group-item:hover {
+            color: #000;
+            background-color: #f8f9fa;
+        }
+
+        /* iframe 容器 */
+        .content-frame {
+            width: 100%;
+            height: calc(100vh - 400px);
+            min-height: 600px;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container my-5 p-0 shadow-lg rounded-4 bg-white overflow-hidden" style="max-width: 1240px;">
+
+    <div class="row m-0 hero-banner d-flex align-items-center">
+        <div class="col-12 text-center">
+            <h1 class="m-0 fw-bold" style="font-size: 42px; letter-spacing: 2px;">
+                NARCISSUS <span class="fw-light">BLOG</span>
+            </h1>
+            <p class="m-0 mt-3 fw-light opacity-75" style="font-size: 16px; letter-spacing: 1px;">
+                专注 JavaWeb 探索与个人技术沉淀
+            </p>
+        </div>
+    </div>
+
+    <div class="row m-0 border-bottom">
+        <nav class="navbar navbar-expand-lg navbar-light bg-white px-4 py-2 w-100">
+            <div class="container-fluid p-0">
+                <ul class="navbar-nav d-flex gap-4">
+                    <li class="nav-item"><a class="nav-link fw-bold text-dark p-0" href="./index.html">首页</a></li>
+                    <li class="nav-item"><a class="nav-link text-muted p-0" href="#">我的博客</a></li>
+                </ul>
+
+                <div class="ms-auto d-flex align-items-center gap-3">
+                    <form class="d-flex search-group gap-2 align-items-center bg-light px-3 py-1 rounded-pill me-2">
+                        <input class="form-control" type="search" placeholder="输入关键词...">
+                        <button class="btn btn-dark btn-sm px-3 rounded-pill" type="submit">搜索</button>
+                    </form>
+
+                    <div class="ms-4 border-start ps-4 d-flex gap-3 align-items-center">
+                        <a href="./login.html" class="text-decoration-none text-muted small">登录</a>
+
+                        <button type="button"
+                                onclick="window.location.href='user/register.html'"
+                                class="btn btn-outline-dark btn-sm rounded-pill px-3">
+                            注册
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row m-0">
+        <div class="col-md-3 border-end bg-white p-0">
+            <div class="accordion sidebar-accordion" id="blogSidebar">
+                <div class="accordion-item">
+                    <h2 class="accordion-header">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#menuOne">
+                            文章分类
+                        </button>
+                    </h2>
+                    <div id="menuOne" class="accordion-collapse collapse show">
+                        <div class="accordion-body p-0">
+                            <div class="list-group list-group-flush">
+                                <a href="#" class="list-group-item list-group-item-action">Java核心技术</a>
+                                <a href="#" class="list-group-item list-group-item-action">Spring生态</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-9 p-0 bg-white">
+            <iframe src="./articleList.html" class="content-frame"></iframe>
+        </div>
+    </div>
+</div>
+
+<div class="text-center pb-5 text-muted small">
+    &copy; 2026 Narcissus Blog. 简约而不简单。
+</div>
+
+</body>
+</html>
